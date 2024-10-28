@@ -27,6 +27,8 @@ import csharpadvanced from '/public/images/csharpadvanced.webp';
 import CSharpUnitTesting from '/public/images/CSharpUnitTesting.webp';
 import javascript_mastery from '/public/images/javascript_mastery.webp';
 import figma from '/public/images/figma.webp';
+import nextjs1 from '/public/images/nextjs1.webp';
+
 
 
 
@@ -206,6 +208,14 @@ const certificaten = [
     link: "https://www.udemy.com/course/figma-ux-ui-design-user-experience-tutorial-course",
     alt: "Mijn UI/UX-ontwerpcertificaat met Figma",
     position: "right"
+  },
+  {
+  name: "Next.js",
+  description: "In deze cursus leerde ik Next.js 13 met TypeScript gebruiken om schaalbare en snelle applicaties te bouwen, met technieken zoals server-side rendering, dynamische routing en API-routes.",
+  image: nextjs1,
+  link: "https://codewithmosh.com/p/ultimate-nextjs-series",
+  alt: "Mijn certificaat voor het beheersen van Next.js 13 met TypeScript",
+  position: "left"
   }
 ];
 
