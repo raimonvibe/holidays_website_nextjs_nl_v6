@@ -1,5 +1,9 @@
+'use client';
+
 import Image from 'next/image';
-import { Metadata } from 'next';
+import { useEffect } from 'react';
+import { createMultipleSnowflakes } from '../../script';
+
 import cat from '/public/images/Cat-v3-final.webp';
 import horse from '/public/images/horse.webp';
 import female from '/public/images/female-v4.webp';
@@ -16,12 +20,22 @@ import monkeys from '/public/images/monkeys.webp';
 import earrings from '/public/images/earrings.webp';
 import christmas_drinkcoaster from '/public/images/christmas_drinkcoaster.webp';
 
-export const metadata: Metadata = {
-  title: '3D Bibliotheek | Raimonvibe',
-  description: 'Verken onze collectie 3D-modellen en ontwerpen die beschikbaar zijn voor aankoop of gratis download.',
-};
 
 const DrieDCollectie: React.FC = () => {
+  useEffect(() => {
+    const socialButtons = document.querySelectorAll('.Social');
+    socialButtons.forEach(button => {
+      (button as HTMLElement).addEventListener('mouseenter', () => createMultipleSnowflakes(button as HTMLElement));
+    });
+
+    // Cleanup functie
+    return () => {
+      socialButtons.forEach(button => {
+        (button as HTMLElement).removeEventListener('mouseenter', () => createMultipleSnowflakes(button as HTMLElement));
+      });
+    };
+  }, []);
+
   return (
     <div>
       <div className="spacing"></div>
@@ -29,7 +43,7 @@ const DrieDCollectie: React.FC = () => {
         <Image
           className="common-properties common-properties-left"
           src={earrings}
-          alt="3d modeleer omgeving"
+          alt="Prachtige sneeuwvlokvormige oorbel"
           width={500}
           height={300}
           priority={true}
@@ -54,7 +68,7 @@ const DrieDCollectie: React.FC = () => {
           </div>
         </article>
       </div>
-
+      
       <main>
         <div className="spacing"></div>
           <br />
