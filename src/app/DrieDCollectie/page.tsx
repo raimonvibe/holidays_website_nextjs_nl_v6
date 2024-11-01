@@ -18,23 +18,14 @@ import cat2 from '/public/images/cat v6 final.webp';
 import deer from '/public/images/deer.webp';
 import monkeys from '/public/images/monkeys.webp';
 import earrings from '/public/images/earrings.webp';
+import christmas_drinkcoaster from '/public/images/christmas_drinkcoaster.webp';
 
+export const metadata: Metadata = {
+  title: '3D Bibliotheek | Raimonvibe',
+  description: 'Verken onze collectie 3D-modellen en ontwerpen die beschikbaar zijn voor aankoop of gratis download.',
+};
 
 const DrieDCollectie: React.FC = () => {
-  useEffect(() => {
-    const socialButtons = document.querySelectorAll('.Social');
-    socialButtons.forEach(button => {
-      (button as HTMLElement).addEventListener('mouseenter', () => createMultipleSnowflakes(button as HTMLElement));
-    });
-
-    // Cleanup functie
-    return () => {
-      socialButtons.forEach(button => {
-        (button as HTMLElement).removeEventListener('mouseenter', () => createMultipleSnowflakes(button as HTMLElement));
-      });
-    };
-  }, []);
-
   return (
     <div>
       <div className="spacing"></div>
@@ -42,7 +33,7 @@ const DrieDCollectie: React.FC = () => {
         <Image
           className="common-properties common-properties-left"
           src={earrings}
-          alt="Prachtige sneeuwvlokvormige oorbel"
+          alt="3d modeleer omgeving"
           width={500}
           height={300}
           priority={true}
@@ -67,28 +58,45 @@ const DrieDCollectie: React.FC = () => {
           </div>
         </article>
       </div>
-      
+
       <main>
         <div className="spacing"></div>
-        <div className="middle-container">
           <br />
           <h3 className="sellfy-text">Webshop:</h3>
           <a className="Social buy-spacing" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe" aria-label="Bezoek de 3D-webshop van Raimonvibe">
             3D
           </a>
-          <div className="spacing"></div>
-          <Image className="model-left" src={monkeys} alt="Een onderzetter met een aap." width={500} height={300} />
+
+
+        <div className="spacing"></div>
+        <div className="middle-container">
+          <Image className="model-right" src={christmas_drinkcoaster} alt="Een kerst onderzetter, perfect voor de feestdagen!" width={500} height={300} />
           <article>
             <div>
-              <h1 className="exclusive-text">🐵 onderzetter</h1>
-              <p>Een prachtige set onderzetters met een afbeelding van een aap. De download bevat twee bestanden.</p>
-              <a className="sellfy-buy-button Social align" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe/3d-model-monkey-drinkcoaster-" data-text="Nu kopen" aria-label="Download gratis aap onderzetter 3D-model">
+              <h1 className="exclusive-text">☃️ Kerst Onderzetter</h1>
+              <p>Een prachtige kerst onderzetter met "Merry Christmas" en feestelijke details zoals hulstbladeren en sneeuwvlokken ❄️. Bescherm je tafel met stijl en breng een beetje kerstvreugde in huis!</p>
+              <a className="sellfy-buy-button Social left-align align" target="_blank" rel="noreferrer" href="https://cults3d.com/en/3d-model/home/christmas-drink-coaster" data-text="Nu downloaden" aria-label="Download gratis kerst onderzetter 3D-model">
                 Gratis!
               </a>
               <div className="spacing3"></div>
             </div>
           </article>
         </div>
+
+          <div className="spacing"></div>
+          <div className="middle-container">
+              <Image className="model-left" src={monkeys} alt="Een onderzetter met een aap." width={500} height={300} />
+              <article>
+                <div>
+                  <h1 className="exclusive-text">🐵 onderzetter</h1>
+                  <p>Een prachtige set onderzetters met een afbeelding van een aap. De download bevat twee bestanden.</p>
+                  <a className="sellfy-buy-button Social align" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe/3d-model-monkey-drinkcoaster-" data-text="Nu kopen" aria-label="Download gratis aap onderzetter 3D-model">
+                    Gratis!
+                  </a>
+                  <div className="spacing3"></div>
+                </div>
+              </article>
+            </div>
 
         <div className="spacing"></div>
         <div className="middle-container">
