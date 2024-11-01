@@ -1,9 +1,5 @@
-'use client';
-
 import Image from 'next/image';
-import { useEffect } from 'react';
-import { createMultipleSnowflakes } from '../../script';
-
+import { Metadata } from 'next';
 import cat from '/public/images/Cat-v3-final.webp';
 import horse from '/public/images/horse.webp';
 import female from '/public/images/female-v4.webp';
