@@ -28,9 +28,7 @@ import CSharpUnitTesting from '/public/images/CSharpUnitTesting.webp';
 import javascript_mastery from '/public/images/javascript_mastery.webp';
 import figma from '/public/images/figma.webp';
 import nextjs1 from '/public/images/nextjs1.webp';
-
-
-
+import docker from '/public/images/docker.webp';
 
 const certificaten = [
   {
@@ -216,6 +214,14 @@ const certificaten = [
   link: "https://codewithmosh.com/p/ultimate-nextjs-series",
   alt: "Mijn certificaat voor het beheersen van Next.js 13 met TypeScript",
   position: "left"
+  },
+  {
+    name: "Docker",
+    description: "In deze cursus leerde ik de basis- en geavanceerde concepten van Docker, inclusief het opzetten van containers, het maken van Docker images en het beheren van applicaties in een containeromgeving. Deze kennis stelt me in staat om efficiënte, schaalbare en gestandaardiseerde ontwikkelingsomgevingen te creëren.",
+    image: docker,
+    link: "https://codewithmosh.com/p/the-ultimate-docker-course",
+    alt: "Mijn Docker certificaat van Code with Mosh",
+    position: "right"
   }
 ];
 
