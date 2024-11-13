@@ -9,7 +9,7 @@ export const metadata = {
 export default function Perspectieven() {
   return (
     <div>
-      <main>
+    <main>
         <div className="middle-container2">
           <article>
             <h1>Mijn Professionele Reis en Perspectieven</h1>
@@ -22,7 +22,7 @@ export default function Perspectieven() {
               </h3>
               <ul>
                 <li><a className="opportunity" href="https://commercetools.com/" target="_blank" rel="noopener noreferrer">Commercetools</a></li>
-                <li><a className="opportunity" href="https://payever.careers/" target="_blank" rel="noopener noreferrer">PAYEVER</a></li>
+                <li><a className="opportunity" href="https://payever.careers/" target="_blank" rel="noopener noreferrer">Payever</a></li>
               </ul>
             </section>
 
@@ -35,6 +35,7 @@ export default function Perspectieven() {
                 <li><a className="opportunity" href="https://careers.cognizant.com/nl/nl" target="_blank" rel="noopener noreferrer">Cognizant</a></li>
                 <li><a className="opportunity" href="https://q-logic.nl/" target="_blank" rel="noopener noreferrer">Qlogic</a></li>
                 <li><a className="opportunity" href="https://www.alten.nl/" target="_blank" rel="noopener noreferrer">Alten</a></li>
+                <li><a className="opportunity" href="https://avanceservices.com/" target="_blank" rel="noopener noreferrer">Avance Consulting</a></li>
               </ul>
             </section>
 
@@ -55,11 +56,13 @@ export default function Perspectieven() {
               <ul>
                 <li><a className="opportunity" href="https://vitas.nl/young-talent" target="_blank" rel="noopener noreferrer">VITAS Young Talent</a></li>
                 <li><a className="opportunity" href="https://cloudstaff.com/" target="_blank" rel="noopener noreferrer">Cloudstaff</a></li>
+                <li><a className="opportunity" href="https://vividresourcing.com/" target="_blank" rel="noopener noreferrer">Vivid Resourcing</a></li>
+                <li><a className="opportunity" href="https://www.telusdigital.com/" target="_blank" rel="noopener noreferrer">Telus Digital</a></li>
               </ul>
             </section>
           </article>
         </div>
-
+      
         <div className="middle-container2">
           <article>
             <p>Deze inzichten hebben mij geholpen mijn professionele vaardigheden verder te ontwikkelen door inzicht te krijgen in verschillende sectoren. Van e-commerce tot IT-consultancy, en van cross-platform ontwikkeling tot talentontwikkeling, deze kansen hebben mij geleid op een pad van continu leren en vaardigheidsontwikkeling. Elke kans heeft bijgedragen aan het verfijnen van mijn expertise en het aanpassen aan nieuwe uitdagingen in het voortdurend evoluerende technologische landschap.</p>
