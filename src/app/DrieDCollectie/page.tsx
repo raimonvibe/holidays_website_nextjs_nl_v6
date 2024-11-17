@@ -21,7 +21,7 @@ import earrings from '/public/images/earrings.webp';
 import christmas_drinkcoaster from '/public/images/christmas_drinkcoaster.webp';
 import moose from '/public/images/moose.webp';
 
-const ThreeDLibrary: React.FC = () => {
+const DrieDCollectie: React.FC = () => {
   useEffect(() => {
     const socialButtons = document.querySelectorAll('.Social');
     socialButtons.forEach(button => {
