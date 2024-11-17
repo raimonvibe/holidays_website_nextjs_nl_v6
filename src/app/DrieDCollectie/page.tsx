@@ -1,5 +1,9 @@
+'use client';
+
 import Image from 'next/image';
-import { Metadata } from 'next';
+import { useEffect } from 'react';
+import { createMultipleSnowflakes } from '../../script';
+
 import cat from '/public/images/Cat-v3-final.webp';
 import horse from '/public/images/horse.webp';
 import female from '/public/images/female-v4.webp';
@@ -14,16 +18,24 @@ import cat2 from '/public/images/cat v6 final.webp';
 import deer from '/public/images/deer.webp';
 import monkeys from '/public/images/monkeys.webp';
 import earrings from '/public/images/earrings.webp';
-import moose from '/public/images/moose.webp';
 import christmas_drinkcoaster from '/public/images/christmas_drinkcoaster.webp';
+import moose from '/public/images/moose.webp';
 
-export const metadata: Metadata = {
-  title: '3D Bibliotheek | Raimonvibe',
-  description: 'Verken onze collectie 3D-modellen en ontwerpen die beschikbaar zijn voor aankoop of gratis download.',
-};
+const ThreeDBibliotheek: React.FC = () => {
+  useEffect(() => {
+    const socialButtons = document.querySelectorAll('.Social');
+    socialButtons.forEach(button => {
+      (button as HTMLElement).addEventListener('mouseenter', () => createMultipleSnowflakes(button as HTMLElement));
+    });
 
+    // Cleanup functie
+    return () => {
+      socialButtons.forEach(button => {
+        (button as HTMLElement).removeEventListener('mouseenter', () => createMultipleSnowflakes(button as HTMLElement));
+      });
+    };
+  }, []);
 
-const DrieDCollectie: React.FC = () => {
   return (
     <div>
       <div className="spacing"></div>
@@ -31,7 +43,7 @@ const DrieDCollectie: React.FC = () => {
         <Image
           className="common-properties common-properties-left"
           src={earrings}
-          alt="3d modeleer omgeving"
+          alt="3D-modelleringsomgeving"
           width={500}
           height={300}
           priority={true}
@@ -42,11 +54,12 @@ const DrieDCollectie: React.FC = () => {
               Gepersonaliseerde 3D Oorbellen Op Bestelling
             </h1>
             <p>
-              Ben je geïnteresseerd in unieke, op maat gemaakte 3D-oorbellen? Ik ben gespecialiseerd
-              in het ontwerpen van op maat gemaakte 3D-oorbelmodellen die perfect passen bij jouw stijl.
-              Als je een persoonlijk en uniek ontwerp wilt laten maken, ben ik hier om jouw
-              ideeën tot leven te brengen. Aarzel niet om contact op te nemen voor een op maat gemaakt ontwerp. Voor
-              meer informatie of om in contact te komen, bezoek mijn{" "}
+              Ben je geïnteresseerd in unieke, op maat gemaakte 3D-oorbellen? Ik
+              ben gespecialiseerd in het ontwerpen van op maat gemaakte 3D-modellen
+              die perfect bij jouw stijl passen. Als je een persoonlijk en uniek
+              ontwerp wilt laten maken, breng ik graag jouw ideeën tot leven. Aarzel
+              niet om contact op te nemen voor een maatwerkontwerp. Voor meer informatie
+              of om contact op te nemen, bezoek mijn{" "}
               <a className="custom-link" href="/Contact" aria-label="Bezoek de contactpagina">
                 contactpagina
               </a>
@@ -56,74 +69,74 @@ const DrieDCollectie: React.FC = () => {
           </div>
         </article>
       </div>
-
       <main>
-        <div className="spacing"></div>
-        <div className="middle-container">
-          <br />
-          <h3 className="sellfy-text">Webshop:</h3>
-          <a className="Social buy-spacing" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe" aria-label="Bezoek de 3D-webshop van Raimonvibe">
-            3D
-          </a>
-          <div className="spacing"></div>
-  <Image className="model-left" src={moose} alt="Een set rendieroorbellen met een winterthema." width={500} height={300} />
+  <div className="spacing"></div>
+  <br />
+  <h3 className="sellfy-text">Webshop:</h3>
+  <a className="Social buy-spacing" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe" aria-label="Bezoek de 3D-webshop van Raimonvibe">
+    3D
+  </a>
+
+  <div className="spacing"></div>
+<div className="middle-container">
+  <Image className="model-left" src={moose} alt="Een set oorbellen met een elandenthema voor de winter." width={500} height={300} />
   <article>
     <div>
-      <h1 className="exclusive-text">🦌 Rendier Oorbellen Winter Set</h1>
-      <p>Vier het winterseizoen met deze charmante set rendieroorbellen. Perfect voor gezellige vibes en feestelijke outfits. De download bevat drie unieke ontwerpen.</p>
-      <a className="sellfy-buy-button Social align" target="_blank" rel="noreferrer" href="https://cults3d.com/en/3d-model/jewelry/moose-earrings-set-winter-themed-3d-model-jewelry" data-text="Nu downloaden" aria-label="Gratis rendier oorbellen 3D-model downloaden">
+      <h1 className="exclusive-text">🦌 Elanden Oorbellen Winter Set</h1>
+      <p>Vier het winterseizoen met deze charmante set oorbellen met elandenthema. Perfect voor gezellige vibes en feestelijke outfits. De download bevat drie unieke ontwerpen.</p>
+      <a className="sellfy-buy-button Social align" target="_blank" rel="noreferrer" href="https://cults3d.com/en/3d-model/jewelry/moose-earrings-set-winter-themed-3d-model-jewelry" data-text="Nu downloaden" aria-label="Download gratis elanden oorbellen 3D-model">
         Gratis!
       </a>
       <div className="spacing3"></div>
     </div>
   </article>
 </div>
+        
+  <div className="spacing"></div>
+  <div className="middle-container">
+    <Image className="model-right" src={christmas_drinkcoaster} alt="Een kerstonderzetter, perfect voor de feestdagen!" width={500} height={300} />
+    <article>
+      <div>
+        <h1 className="exclusive-text">☃️ Kerst Onderzetter</h1>
+        <p>Een prachtige kerstonderzetter met "Merry Christmas" en feestelijke details zoals hulstbladeren en sneeuwvlokken ❄️. Bescherm je tafel met stijl en breng een vleugje kerstvreugde in huis!</p>
+        <a className="sellfy-buy-button Social left-align align" target="_blank" rel="noreferrer" href="https://cults3d.com/en/3d-model/home/christmas-drink-coaster" data-text="Nu downloaden" aria-label="Download gratis kerst onderzetter 3D-model">
+          Gratis!
+        </a>
+        <div className="spacing3"></div>
+      </div>
+    </article>
+  </div>
 
+  <div className="spacing"></div>
+  <div className="middle-container">
+    <Image className="model-left" src={monkeys} alt="Een onderzetter met een apendesign." width={500} height={300} />
+    <article>
+      <div>
+        <h1 className="exclusive-text">🐵 Apen Onderzetter</h1>
+        <p>Een prachtige set onderzetters met een apendesign. De download bevat twee bestanden.</p>
+        <a className="sellfy-buy-button Social align" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe/3d-model-monkey-drinkcoaster-" data-text="Nu downloaden" aria-label="Download gratis apen onderzetter 3D-model">
+          Gratis!
+        </a>
+        <div className="spacing3"></div>
+      </div>
+    </article>
+  </div>
 
         <div className="spacing"></div>
         <div className="middle-container">
-          <Image className="model-right" src={christmas_drinkcoaster} alt="Een kerst onderzetter, perfect voor de feestdagen!" width={500} height={300} />
-          <article>
-            <div>
-              <h1 className="exclusive-text">☃️ Kerst Onderzetter</h1>
-              <p>Een prachtige kerst onderzetter met "Merry Christmas" en feestelijke details zoals hulstbladeren en sneeuwvlokken ❄️. Bescherm je tafel met stijl en breng een beetje kerstvreugde in huis!</p>
-              <a className="sellfy-buy-button Social left-align align" target="_blank" rel="noreferrer" href="https://cults3d.com/en/3d-model/home/christmas-drink-coaster" data-text="Nu downloaden" aria-label="Download gratis kerst onderzetter 3D-model">
-                Gratis!
-              </a>
-              <div className="spacing3"></div>
-            </div>
-          </article>
-        </div>
-
-          <div className="spacing"></div>
-          <div className="middle-container">
-              <Image className="model-left" src={monkeys} alt="Een onderzetter met een aap." width={500} height={300} />
-              <article>
-                <div>
-                  <h1 className="exclusive-text">🐵 onderzetter</h1>
-                  <p>Een prachtige set onderzetters met een afbeelding van een aap. De download bevat twee bestanden.</p>
-                  <a className="sellfy-buy-button Social align" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe/3d-model-monkey-drinkcoaster-" data-text="Nu kopen" aria-label="Download gratis aap onderzetter 3D-model">
-                    Gratis!
-                  </a>
-                  <div className="spacing3"></div>
-                </div>
-              </article>
-            </div>
-
-        <div className="spacing"></div>
-        <div className="middle-container">
-          <Image className="model-right" src={deer} alt="Een kerst herten ornament, erg grappig!" width={500} height={300} />
+          <Image className="model-right" src={deer} alt="Een kerst hertenornament, heel grappig!" width={500} height={300} />
           <article>
             <div>
               <h1 className="exclusive-text">☃️ Ornament</h1>
-              <p>Een kerst herten ornament. Ideaal voor kerst ☃️. Geef je kerstboom een vrolijke uitstraling met deze prachtige decoratie!</p>
-              <a className="sellfy-buy-button Social left-align align" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe/3d-model-christas-deer-ornament-" data-text="Nu kopen" aria-label="Download gratis kerst herten ornament 3D-model">
+              <p>Een kerst hertenornament. Ideaal voor Kerst ☃️. Geef je kerstboom een vrolijke uitstraling met deze prachtige decoratie!</p>
+              <a className="sellfy-buy-button Social left-align align" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe/3d-model-christas-deer-ornament-" data-text="Nu kopen" aria-label="Download gratis kerst hertenornament 3D-model">
                 Gratis!
               </a>
               <div className="spacing3"></div>
             </div>
           </article>
         </div>
+
 
 
         <div className="spacing"></div>
