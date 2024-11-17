@@ -1,8 +1,5 @@
-
 import Image from 'next/image';
-import { useEffect } from 'react';
-import { createMultipleSnowflakes } from '../../script';
-
+import { Metadata } from 'next';
 import cat from '/public/images/Cat-v3-final.webp';
 import horse from '/public/images/horse.webp';
 import female from '/public/images/female-v4.webp';
@@ -24,6 +21,7 @@ export const metadata: Metadata = {
   title: '3D Bibliotheek | Raimonvibe',
   description: 'Verken onze collectie 3D-modellen en ontwerpen die beschikbaar zijn voor aankoop of gratis download.',
 };
+
 
 const DrieDCollectie: React.FC = () => {
   return (
