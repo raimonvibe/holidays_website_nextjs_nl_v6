@@ -21,7 +21,7 @@ import earrings from '/public/images/earrings.webp';
 import christmas_drinkcoaster from '/public/images/christmas_drinkcoaster.webp';
 import moose from '/public/images/moose.webp';
 
-const ThreeDBibliotheek: React.FC = () => {
+const ThreeDLibrary: React.FC = () => {
   useEffect(() => {
     const socialButtons = document.querySelectorAll('.Social');
     socialButtons.forEach(button => {
@@ -91,7 +91,8 @@ const ThreeDBibliotheek: React.FC = () => {
     </div>
   </article>
 </div>
-        
+
+
   <div className="spacing"></div>
   <div className="middle-container">
     <Image className="model-right" src={christmas_drinkcoaster} alt="Een kerstonderzetter, perfect voor de feestdagen!" width={500} height={300} />
@@ -136,8 +137,6 @@ const ThreeDBibliotheek: React.FC = () => {
             </div>
           </article>
         </div>
-
-
 
         <div className="spacing"></div>
         <div className="middle-container">
