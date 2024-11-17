@@ -18,24 +18,15 @@ import cat2 from '/public/images/cat v6 final.webp';
 import deer from '/public/images/deer.webp';
 import monkeys from '/public/images/monkeys.webp';
 import earrings from '/public/images/earrings.webp';
+import moose from '/public/images/moose.webp';
 import christmas_drinkcoaster from '/public/images/christmas_drinkcoaster.webp';
 
+export const metadata: Metadata = {
+  title: '3D Bibliotheek | Raimonvibe',
+  description: 'Verken onze collectie 3D-modellen en ontwerpen die beschikbaar zijn voor aankoop of gratis download.',
+};
 
 const DrieDCollectie: React.FC = () => {
-  useEffect(() => {
-    const socialButtons = document.querySelectorAll('.Social');
-    socialButtons.forEach(button => {
-      (button as HTMLElement).addEventListener('mouseenter', () => createMultipleSnowflakes(button as HTMLElement));
-    });
-
-    // Cleanup functie
-    return () => {
-      socialButtons.forEach(button => {
-        (button as HTMLElement).removeEventListener('mouseenter', () => createMultipleSnowflakes(button as HTMLElement));
-      });
-    };
-  }, []);
-
   return (
     <div>
       <div className="spacing"></div>
@@ -43,7 +34,7 @@ const DrieDCollectie: React.FC = () => {
         <Image
           className="common-properties common-properties-left"
           src={earrings}
-          alt="Prachtige sneeuwvlokvormige oorbel"
+          alt="3d modeleer omgeving"
           width={500}
           height={300}
           priority={true}
@@ -68,14 +59,28 @@ const DrieDCollectie: React.FC = () => {
           </div>
         </article>
       </div>
-      
+
       <main>
         <div className="spacing"></div>
+        <div className="middle-container">
           <br />
           <h3 className="sellfy-text">Webshop:</h3>
           <a className="Social buy-spacing" target="_blank" rel="noreferrer" href="https://zaap.bio/raimonvibe" aria-label="Bezoek de 3D-webshop van Raimonvibe">
             3D
           </a>
+          <div className="spacing"></div>
+  <Image className="model-left" src={moose} alt="Een set rendieroorbellen met een winterthema." width={500} height={300} />
+  <article>
+    <div>
+      <h1 className="exclusive-text">🦌 Rendier Oorbellen Winter Set</h1>
+      <p>Vier het winterseizoen met deze charmante set rendieroorbellen. Perfect voor gezellige vibes en feestelijke outfits. De download bevat drie unieke ontwerpen.</p>
+      <a className="sellfy-buy-button Social align" target="_blank" rel="noreferrer" href="https://cults3d.com/en/3d-model/jewelry/moose-earrings-set-winter-themed-3d-model-jewelry" data-text="Nu downloaden" aria-label="Gratis rendier oorbellen 3D-model downloaden">
+        Gratis!
+      </a>
+      <div className="spacing3"></div>
+    </div>
+  </article>
+</div>
 
 
         <div className="spacing"></div>
@@ -122,6 +127,7 @@ const DrieDCollectie: React.FC = () => {
             </div>
           </article>
         </div>
+
 
         <div className="spacing"></div>
         <div className="middle-container">
