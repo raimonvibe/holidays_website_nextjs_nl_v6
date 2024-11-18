@@ -20,6 +20,7 @@ import monkeys from '/public/images/monkeys.webp';
 import earrings from '/public/images/earrings.webp';
 import christmas_drinkcoaster from '/public/images/christmas_drinkcoaster.webp';
 import moose from '/public/images/moose.webp';
+import snowflake from '/public/images/snowflake.webp';
 
 const DrieDCollectie: React.FC = () => {
   useEffect(() => {
@@ -77,6 +78,22 @@ const DrieDCollectie: React.FC = () => {
     3D
   </a>
 
+
+  <div className="spacing"></div>
+<div className="middle-container">
+  <Image className="model-right" src={snowflake} alt="Elegante sneeuwvlok oorbellen, perfect voor het feestseizoen!" width={500} height={300} />
+  <article>
+    <div>
+      <h1 className="exclusive-text">❄️ Elegante Sneeuwvlok Oorbellen</h1>
+      <p>Vier het winterseizoen met deze prachtig gedetailleerde sneeuwvlok oorbellen ❄️. Hun ijzige charme geeft een magische touch aan elke outfit, waardoor ze het perfecte accessoire zijn voor feestjes of een doordacht kerstcadeau. Voeg een sprankel toe aan je wintergarderobe met deze schitterende oorbellen!</p>
+      <a className="sellfy-buy-button Social left-align align" target="_blank" rel="noreferrer" href="https://cults3d.com/en/3d-model/jewelry/snowflake-earrings-v1" data-text="Download nu" aria-label="Download gratis sneeuwvlok oorbellen 3D model">
+        Gratis!
+      </a>
+      <div className="spacing3"></div>
+    </div>
+  </article>
+</div>
+        
   <div className="spacing"></div>
 <div className="middle-container">
   <Image className="model-left" src={moose} alt="Een set oorbellen met een elandenthema voor de winter." width={500} height={300} />
