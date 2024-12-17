@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import cover from "../../public/images/cover.webp";
+import cover from "../../public/images/cover-nl.webp";
 import Dropdown11 from './Dropdown11';
 
 interface NavLink {
