@@ -5,7 +5,6 @@ import Welkom from "../app/Welkom/page";
 import Diensten from "../app/Diensten/page";
 import Certificaten from "../app/Certificaten/page";
 import CurriculumVitae from "../app/CurriculumVitae/page";
-import Webwinkel from "../app/Webwinkel/page";
 import NavbarHome from "./NavbarHome";
 import Privacybeleid from "../app/Privacybeleid/page";
 import JuridischeKennisgeving from "../app/JuridischeKennisgeving/page";
@@ -25,7 +24,6 @@ export {
   Privacybeleid,
   JuridischeKennisgeving,
   OverMij,
-  Webwinkel,
   Footer,
   DrieDCollectie,
 };
