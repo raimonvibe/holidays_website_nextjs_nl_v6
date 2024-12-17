@@ -23,7 +23,6 @@ const NavbarHome: React.FC = () => {
     { href: "/Certificaten", label: "Certificaten" },
     { href: "CurriculumVitae", label: "Mijn CV", target: "_blank" },
     { href: "/Contact", label: "Contact" },
-    { href: "/Webwinkel", label: "Webwinkel" }
   ];
 
   return (
