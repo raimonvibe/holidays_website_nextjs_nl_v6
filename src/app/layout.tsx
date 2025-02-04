@@ -55,7 +55,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <title>Home raimonvibe</title>
         <Script type="text/javascript" charSet="UTF-8" src="//cdn.cookie-script.com/s/bc6138fbc116438ba4c0b26d11e59b5f.js" />
-        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="icon" type="image/png" href="favicon.png" />
         <link rel="canonical" href="https://raimonvibe.nl/" />
         <link rel="alternate" hrefLang="nl" href="https://raimonvibe.nl" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
