@@ -48,7 +48,7 @@ export default function RootLayout({
       button.addEventListener('mouseenter', () => createMultipleSnowflakes(button as HTMLElement));
     });
   }, []);
-
+}
 
   return (
     <html lang="nl">
